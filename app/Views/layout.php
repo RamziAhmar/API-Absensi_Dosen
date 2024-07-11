@@ -59,47 +59,42 @@
         <div class="container">
             <ul class="nav page-navigation">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">
-                  <i class="mdi mdi-file-document-box menu-icon"></i>
-                  <span class="menu-title">Dashboard</span>
-                </a>
+                  <a href="/home" class="nav-link">
+                    <i class="mdi mdi mdi-file-document-box menu-icon"></i>
+                    <span class="menu-title">Dashboard</span>
+                    <i class="menu-arrow"></i>
+                  </a>
               </li>
               <li class="nav-item">
-                  <a href="#" class="nav-link">
+                  <a href="/dosen" class="nav-link">
                     <i class="mdi mdi mdi-account-multiple menu-icon"></i>
                     <span class="menu-title">Dosen</span>
                     <i class="menu-arrow"></i>
                   </a>
-                  <div class="submenu">
-                      <ul>
-                          <li class="nav-item"><a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                          <li class="nav-item"><a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
-                      </ul>
-                  </div>
               </li>
               <li class="nav-item">
-                  <a href="pages/forms/basic_elements.html" class="nav-link">
+                  <a href="/absensi" class="nav-link">
                     <i class="mdi mdi-bookmark-check menu-icon"></i>
                     <span class="menu-title">Absensi</span>
                     <i class="menu-arrow"></i>
                   </a>
               </li>
               <li class="nav-item">
-                  <a href="pages/charts/chartjs.html" class="nav-link">
+                  <a href="/jadwal" class="nav-link">
                     <i class="mdi mdi-calendar-multiple menu-icon"></i>
                     <span class="menu-title">Jadwal</span>
                     <i class="menu-arrow"></i>
                   </a>
               </li>
               <li class="nav-item">
-                  <a href="pages/charts/chartjs.html" class="nav-link">
+                  <a href="/matkul" class="nav-link">
                     <i class="mdi mdi-book-open-page-variant menu-icon"></i>
                     <span class="menu-title">Matkul</span>
                     <i class="menu-arrow"></i>
                   </a>
               </li>
               <li class="nav-item">
-                  <a href="pages/tables/basic-table.html" class="nav-link">
+                  <a href="/user" class="nav-link">
                     <i class="mdi mdi-account-box menu-icon"></i>
                     <span class="menu-title">Users</span>
                     <i class="menu-arrow"></i>
