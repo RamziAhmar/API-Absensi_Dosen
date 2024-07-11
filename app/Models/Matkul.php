@@ -6,13 +6,9 @@ use CodeIgniter\Model;
 
 class Matkul extends Model
 {
-    protected $table            = 'matkuls';
-    protected $primaryKey       = 'id';
-    protected $useAutoIncrement = true;
-    protected $returnType       = 'array';
-    protected $useSoftDeletes   = false;
-    protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $table            = 'matkul';
+    protected $primaryKey       = 'id_matkul';
+    protected $allowedFields    = ['nama_matkul', 'sks', 'keterangan'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
