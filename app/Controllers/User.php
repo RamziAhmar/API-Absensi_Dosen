@@ -22,4 +22,9 @@ class User extends BaseController
         
         return view('user', $data);
     }
+
+    public function create()
+    {
+        return view('user_form');
+    }
 }

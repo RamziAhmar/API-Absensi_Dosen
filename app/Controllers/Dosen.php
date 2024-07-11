@@ -20,6 +20,6 @@ class Dosen extends BaseController
             'absensi'=> $this->dosen->findAll()
         ];
         
-        return view('absensi', $data);
+        return view('dosen', $data);
     }
 }
