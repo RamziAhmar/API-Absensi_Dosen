@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Matkul extends Model
+class MatkulModel extends Model
 {
     protected $table            = 'matkul';
     protected $primaryKey       = 'id_matkul';

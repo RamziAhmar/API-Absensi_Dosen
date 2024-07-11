@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Jadwal extends Model
+class JadwalModel extends Model
 {
     protected $table            = 'jadwal';
     protected $primaryKey       = 'id_jadwal';

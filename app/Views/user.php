@@ -4,50 +4,37 @@
   <div class="card">
     <div class="card-body">
       <h4 class="card-title">Striped Table</h4>
-      <p class="card-description">
-        Add class <code>.table-striped</code>
-      </p>
       <div class="table-responsive">
         <table class="table table-striped">
           <thead>
             <tr>
               <th>
-                User
+                No
               </th>
               <th>
-                First name
+                username
               </th>
               <th>
-                Progress
+                Password
               </th>
               <th>
-                Amount
+                Akses
               </th>
               <th>
-                Deadline
+                Aksi
               </th>
             </tr>
           </thead>
           <tbody>
+            <?php $no=1; foreach($user as $row){ ?>
             <tr>
-              <td class="py-1">
-                <img src="../../images/faces/face1.jpg" alt="image" />
-              </td>
-              <td>
-                Herman Beck
-              </td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </td>
-              <td>
-                $ 77.99
-              </td>
-              <td>
-                May 15, 2015
-              </td>
+              <td><?= $no++ ?></td>
+              <td><?= $row['username'] ?></td>
+              <td><?= $row['password'] ?></td>
+              <td><?= $row['akses'] ?></td>
+              <td></td>
             </tr>
+            <?php } ?>
           </tbody>
         </table>
       </div>
