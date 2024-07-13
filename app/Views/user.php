@@ -37,7 +37,7 @@
               <td><?= $no++ ?></td>
               <td><?= $row['username'] ?></td>
               <td><?= $row['password'] ?></td>
-              <td><?= $row['akses'] ?></td>
+              <td><?= $row['akses'] == 1 ? 'Admin' : 'Dosen' ?></td>
               <td></td>
             </tr>
             <?php } ?>

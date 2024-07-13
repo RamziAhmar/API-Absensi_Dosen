@@ -37,9 +37,9 @@
                         foreach ($absensi as $row) { ?>
                             <tr>
                                 <td><?= $no++ ?></td>
-                                <td><?= $row['id_dosen'] ?></td>
-                                <td><?= $row['id_jadwal'] ?></td>
-                                <td><?= $row['status'] ?></td>
+                                <td><?= $row->nama_lengkap ?></td>
+                                <td><?= $row->tanggal ?></td>
+                                <td><?= $row->status ?></td>
                                 <td></td>
                             </tr>
                         <?php } ?>

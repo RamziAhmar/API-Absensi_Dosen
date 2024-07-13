@@ -17,9 +17,28 @@ class Dosen extends BaseController
     {
         $data = [
             'title' =>'Absensi',
-            'absensi'=> $this->dosen->findAll()
+            'dosen'=> $this->dosen->show()
         ];
         
         return view('dosen', $data);
+    }
+
+    public function create()
+    {
+        return view('dosen_form');
+    }
+
+    public function insert()
+    {
+        $data = [
+            'id_user' => $this->request->getVar('id_user'),
+            'nama_lengkap' => $this->request->getVar('nama_lengkap'),
+            'email' => $this->request->getVar('email'),
+            'no_hp' => $this->request->getVar('no_hp'),
+        ];
+
+        $this->dosen->insert($data);
+        session()->setFlashdata('pesan', 'Data Berhasil Ditambahkan!!');
+        return redirect()->to('/dosen');
     }
 }

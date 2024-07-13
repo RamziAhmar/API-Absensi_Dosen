@@ -26,20 +26,25 @@
           <ul class="navbar-nav navbar-nav-left">
             <li class="nav-item ms-0 me-5 d-lg-flex d-none">
             <div>
-                <h3 class="text-dark font-weight-bold mb-2">Hi, welcome back!</h3>
+              <?php if(session()->akses == 2) : ?>
+                <h3 class="text-dark font-weight-bold mb-2">Selamat Datang <?= session()->dosen['nama_lengkap'] ?></h3>
+              <?php endif ?>
+              <?php if(session()->akses == 1) : ?>
+                <h3 class="text-dark font-weight-bold mb-2">Selamat Datang <?= session()->user['username'] ?></h3>
+              <?php endif ?>
                 <h6 class="font-weight-normal mb-2">Last login was 23 hours ago. View details</h6>
               </div>
             </li>
           </ul>
           <div class="navbar-brand-wrapper d-flex align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo" href="index.html"><img src="<?= base_url('template/template/') ?>images/logo.svg" alt="logo" /></a>
-            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="<?= base_url('template/template/') ?>images/logo-mini.svg" alt="logo" /></a>
+            <a class="navbar-brand brand-logo" href="/"><img src="<?= base_url('template/template/') ?>images/logo.svg" alt="logo" /></a>
+            <a class="navbar-brand brand-logo-mini" href="/"><img src="<?= base_url('template/template/') ?>images/logo-mini.svg" alt="logo" /></a>
           </div>
           <ul class="navbar-nav navbar-nav-right">
 
             <li class="nav-item nav-profile dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
-                <span class="nav-profile-name">Johnson</span>
+                <span class="nav-profile-name"><?= session()->user['username'] ?></span>
                 <span class="online-status"></span>
                 <img src="<?= base_url('template/template/') ?>images/faces/face28.png" alt="profile" />
               </a>
@@ -48,7 +53,7 @@
                   <i class="mdi mdi-account text-primary"></i>
                   Profil
                 </a>
-                <a class="dropdown-item">
+                <a href="/logout" class="dropdown-item">
                   <i class="mdi mdi-logout text-primary"></i>
                   Logout
                 </a>
@@ -99,6 +104,7 @@
               <i class="menu-arrow"></i>
             </a>
           </li>
+          <?php if(session()->akses == 1): ?>
           <li class="nav-item">
             <a href="/user" class="nav-link">
               <i class="mdi mdi-account-box menu-icon"></i>
@@ -106,6 +112,7 @@
               <i class="menu-arrow"></i>
             </a>
           </li>
+          <?php endif ?>
         </ul>
       </div>
     </nav>

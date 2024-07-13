@@ -17,9 +17,27 @@ class Absensi extends BaseController
     {
         $data = [
             'title' =>'Absensi',
-            'absensi'=> $this->absensi->findAll()
+            'absensi'=> $this->absensi->show()
         ];
         
         return view('absensi', $data);
+    }
+
+    public function create()
+    {
+        return view('absensi_form');
+    }
+
+    public function insert()
+    {
+        $data = [
+            'id_dosen' => $this->request->getVar('id_dosen'),
+            'id_jadwal' => $this->request->getVar('id_jadwal'),
+            'status' => $this->request->getVar('status'),
+        ];
+
+        $this->absensi->insert($data);
+        session()->setFlashdata('pesan', 'Data Berhasil Ditambahkan!!');
+        return redirect()->to('/absensi');
     }
 }

@@ -2,6 +2,8 @@
 
 namespace Config;
 
+use App\Filters\AdminFilter;
+use App\Filters\DosenFilter;
 use CodeIgniter\Config\Filters as BaseFilters;
 use CodeIgniter\Filters\Cors;
 use CodeIgniter\Filters\CSRF;
@@ -34,6 +36,8 @@ class Filters extends BaseFilters
         'forcehttps'    => ForceHTTPS::class,
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
+        'AdminFilter'   => AdminFilter::class,
+        'DosenFilter'   => DosenFilter::class
     ];
 
     /**
@@ -72,10 +76,23 @@ class Filters extends BaseFilters
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',
+            'AdminFilter' =>[
+                'except' => ['/', 'login']
+            ],
+            'DosenFilter' =>[
+                'except' => ['/', 'login']
+            ],
         ],
         'after' => [
             // 'honeypot',
             // 'secureheaders',
+            'AdminFilter' => [
+                'except' => ['/*']
+            ],
+            'DosenFilter' => [
+                'except' => ['/hadir', '/jadwal', '/dosen', '/absensi', '/matkul']
+            ],
+            'toolbar',
         ],
     ];
 
